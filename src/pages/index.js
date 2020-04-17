@@ -1,3 +1,17 @@
 import React from "react"
+import Link from "gatsby-link"
+import Layout from "../layouts/layout"
 
-export default () => <div>Hello world!</div>
+const IndexPage = () =>{
+    return (
+    <Layout>
+      <h1>Hi! I'm building a fake Gatsby site!</h1>
+      <p>
+        What do I like to do? Lots of course but definitely enjoy building
+        websites.
+      </p>
+    </Layout>
+    )
+  }
+
+export default IndexPage

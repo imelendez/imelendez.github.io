@@ -5,6 +5,23 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `IsmaelTechNow`,
+    author: `Ismael Melendez`,
+    twitterurl: 'https://twitter.com/ismaeltechnow',
+    twitterusername: `@IsmaelTechNow`,
+  },
   /* Your site config here */
-  plugins: []
+  plugins: [
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify-cms`,
+  ]
 }
