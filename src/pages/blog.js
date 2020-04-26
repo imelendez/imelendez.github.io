@@ -5,18 +5,21 @@ import Layout from "../layouts/layout"
 const Blog = () => {
     const data  = useStaticQuery(graphql`
     query{
-        allMarkdownRemark{
-          edges{
-            node{
-              frontmatter{
-                date
-                title
-              }
-              html
-              excerpt
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+            }
+            html
+            excerpt
+            fields {
+              slug
             }
           }
         }
+      }
       }`)
       console.log(data);
     return(
@@ -26,8 +29,10 @@ const Blog = () => {
                 {data.allMarkdownRemark.edges.map((edge)=>{
                     return(
                         <li>
+                          <Link to={`/blog/${edge.node.fields.slug}`}>
                             <h2>{edge.node.frontmatter.title}</h2>
                             <p>{edge.node.frontmatter.date }</p>
+                          </Link>
                         </li>
                     )
                 })}
