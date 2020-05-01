@@ -14,6 +14,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
+      
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -21,6 +22,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
