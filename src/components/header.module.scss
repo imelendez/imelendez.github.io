@@ -4,16 +4,17 @@
 
 .title
 {
-    color: #000000;
+    color: #D33474;
     font-size: 3rem;
     text-decoration: none;
 }
 
 .nav-item{
-    color:#999999;
+    color:#D33474;
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
+    
 }
 
 .nav-list{
@@ -23,9 +24,9 @@
 }
 
 .nav-item:hover{
-    color: #666666;
+    color: #06E089;
 }
 
 .active-nav-item{
-    color: #333333;
+    color: #51BC91;
 }
